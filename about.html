@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notetet | About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!--This page contains information about the design ratoinale 
+and features of Notetet,as well as some facts about note-taking 
+and how it can benefit users. It also includes links to external resources 
+for further reading on the topic. The navigation bar and footer are consistent 
+with the other pages for easy navigation.-->
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Notetet</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="index.html">Back</a>
+        <a class="btn btn-primary" href="projects.html">Start Writing</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>About Notetet</h1>
+      <p>
+        Notetet is designed to make note-taking feel simple and fast. It focuses on writing first,
+        then organizing and finding notes without confusion.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>5 facts about note-taking</h2>
+        <p>These are the reasons Notetet is built the way it is.</p>
+      </div>
+
+      <div class="facts">
+        <article class="fact">
+          <h3>1) Writing helps memory</h3>
+          <p>When you write notes, your brain processes information more deeply than just rereading.</p>
+          <a href="https://medium.com/wttj-tech/why-taking-notes-can-be-beneficial-for-you-and-others-9337235ebf62" target="_blank" rel="noopener noreferrer">Click for more info</a></p>
+        </article>
+
+        <article class="fact">
+          <h3>2) Short summaries beat copying</h3>
+          <p>Summarizing in your own words forces understanding, which makes studying easier later.</p>
+          <a href="https://owl.excelsior.edu/plagiarism/plagiarism-how-to-avoid-it/plagiarism-summarizing/" target="_blank" rel="noopener noreferrer">Click for more info</a></p>
+        </article>
+
+        <article class="fact">
+          <h3>3) Organization saves time</h3>
+          <p>Tags and titles matter. If you can’t find your notes quickly, they’re basically gone.</p>
+        </article>
+
+        <article class="fact">
+          <h3>4) Spaced review works better</h3>
+          <p>Reviewing notes across multiple days is more effective than a single long cram session.</p>
+        </article>
+
+        <article class="fact">
+          <h3>5) Clutter kills focus</h3>
+          <p>Too many menus and popups makes note-taking harder. A calm layout makes you write more.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cards">
+        <div class="card">
+          <h3>Navigation logic</h3>
+          <p>Home explains the value. About explains the “why.” Projects is where you actually work.</p>
+        </div>
+        <div class="card">
+          <h3>Simple by design</h3>
+          <p>Notetet avoids feature overload so your notes are the main thing on the screen.</p>
+        </div>
+        <div class="card">
+          <h3>Made for students</h3>
+          <p>Fast note switching, search, and tags are built for classes, studying, and projects.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Notetet</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

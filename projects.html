@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notetet | Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+    <!--This page is the main workspace for users to create, edit, and manage their notes. 
+       By far this page took the most time to design and implement. 
+       It includes a sidebar for searching and listing notes, as well as an editor area for writing 
+       and formatting notes. The navigation bar and footer are consistent with the other pages for easy 
+       navigation. The page also includes buttons for creating new notes, saving, exporting, and deleting 
+       notes, with appropriate event listeners in the script.js file to handle these actions. Additionally, 
+      there are sections for quick tips and images to  enhance the user experience.-->
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Notetet</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="btnNewNote" type="button">New Note</button>
+        <button class="btn btn-primary" id="btnSave" type="button">Save</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>Projects</h1>
+      <p>Write notes, tag them, search them, and export them. Everything saves locally in your browser.</p>
+    </section>
+
+    <section class="workspace">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <label class="field">
+            <span class="field-label">Search notes</span>
+            <input id="searchInput" class="input" type="text" placeholder="Search title, tags, or text..." />
+          </label>
+
+          <!-- Export and delete buttons for the active note, with event listeners
+            in script.js to handle these actions. -->
+          <div class="sidebar-actions">
+            <button class="btn btn-small" id="btnExport" type="button">Export .txt</button>
+            <button class="btn btn-small btn-danger" id="btnDelete" type="button">Delete</button>
+          </div>
+        </div>
+
+        <div class="note-list" id="noteList" aria-label="Saved notes"></div>
+        <div class="tips">
+
+          <!-- This section provides quick tips for using the note-taking 
+           interface in form of a list of bullet points!-->
+          <p class="tips-title">Quick tips</p>
+          <ul>
+            <li>Use tags like: <span class="tag">school</span> <span class="tag">work</span> <span class="tag">ideas</span></li>
+            <li>Autosave runs while you type.</li>
+            <li>Export saves the current note to a text file.</li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Images -->
+        <div class="sidebar-images" aria-label="Notetet images">
+          <p class="tips-title">My Fav Animals</p>
+          <div class="sidebar-image-grid">
+            <img src="images/image1.png" alt="Notetet preview image 1" class="sidebar-image" />
+            <img src="images/image2.png" alt="Notetet preview image 2" class="sidebar-image" />
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Editor -->
+      <section class="editor">
+        <div class="editor-head">
+          <div class="editor-fields">
+            <label class="field">
+              <span class="field-label">Title</span>
+              <input id="titleInput" class="input" type="text" placeholder="e.g., CMSCI 256 — Web Protocols" />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Tags (comma separated)</span>
+              <input id="tagsInput" class="input" type="text" placeholder="school, cs, web" />
+            </label>
+          </div>
+
+           <!-- Added predefined buttons just for fun -->
+          <div class="toolbar" role="toolbar" aria-label="Editor toolbar">
+            <button class="tool" data-insert="• " type="button">Bullet</button>
+            <button class="tool" data-insert="✅ " type="button">Check</button>
+            <button class="tool" data-insert="— " type="button">Dash</button>
+            <button class="tool" data-insert="## " type="button">Heading</button>
+            <button class="tool" data-insert="```" type="button">Code</button>
+          </div>
+        </div>
+
+         <!-- The main textarea for writing notes, with a placeholder to guide users. 
+              The toolbar buttons insert predefined text snippets honestly jsut for fun! -->
+        <label class="field">
+          <span class="field-label">Note</span>
+          <textarea id="contentInput" class="textarea" placeholder="Start typing..."></textarea>
+        </label>
+
+
+        <!-- This section contains a visual status indicator for saving notes, 
+       as well as a text status message. The saveDot changes color based on the 
+       saving status (e.g., red for unsaved changes,green for saved), and the statusText 
+       provides feedback to the user about the current state of their notes (e.g., "Saving...", "Saved", "Error"). -->
+        <div class="editor-bottom">
+          <div class="status">
+            <span class="status-dot" id="saveDot" aria-hidden="true"></span>
+            <span id="statusText">Ready</span>
+          </div>
+          
+          <!--Just some extra info under the textarea and status indicator-->
+          <div class="images">
+            <p class="images-title">Notetet Your Personal Note-taking app</p>
+            <div class="img-row">
+              <div class="img-card">
+                <div class="img-icon">🗒️</div>
+                <div>
+                  <p class="img-label">Notes</p>
+                  <p class="img-sub">Clean workspace</p>
+                </div>
+              </div>
+              <div class="img-card">
+                <div class="img-icon">🔎</div>
+                <div>
+                  <p class="img-label">Search</p>
+                  <p class="img-sub">Find instantly</p>
+                </div>
+              </div>
+              <div class="img-card">
+                <div class="img-icon">🏷️</div>
+                <div>
+                  <p class="img-label">Tags</p>
+                  <p class="img-sub">Stay organized</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </section>
+  </main>
+
+  <!-- The footer contains copyright information and links to the Home and About 
+   pages for easy navigation. -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Notetet</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

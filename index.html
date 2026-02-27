@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notetet | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--This part of the page contains the navigation bar with links to Home, About, 
+  and Projects pages, as well as action buttons. -->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="brand" href="index.html">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Notetet</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="about.html">Learn</a>
+        <a class="btn btn-primary" href="projects.html">Start Writing</a>
+      </div>
+   </nav>
+  </header>
+
+
+  <!--This is the main content of the homepage, including a hero section with a title, subtitle, 
+  and a preview of the note-taking interface, as well as a section explaining why Notetet 
+  is more usable than Evernote. -->
+   <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <p class="pill">Simple. Fast. Actually more usable than Evernote.</p>
+        <h1 class="hero-title">Your notes, without the noise.</h1>
+        <p class="hero-subtitle">
+          Notetet is a clean note space built for focus. Start writing instantly, organize with tags,
+          and find anything fast.
+        </p>
+
+      <!-- This section contains the main call-to-action buttons and a preview of
+           the note-taking interface, as well as some stats about the app. -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="projects.html">Start Writing</a>
+          <a class="btn btn-ghost" href="about.html">Why note-taking works</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">Click to start</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">0</div>
+            <div class="stat-label">Distractions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Infinite Ideas captured</div>
+          </div>
+        </div>
+      </div>
+
+      <!--This part was just a desing feature I thought added visual 
+      representation of my Idea for Notetet-->
+      <div class="hero-right">
+        <div class="preview-card">
+          <div class="preview-top">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="preview-title">Quick Preview</span>
+          </div>
+          <div class="preview-body">
+            <h3 class="preview-h">Lecture Notes — CMSCI 256</h3>
+            <p class="preview-p">
+              • HTTP vs HTTPS (TLS adds encryption + identity)<br/>
+              • DNS resolves names to IP (usually UDP)<br/>
+              • TCP = reliable + ordered delivery<br/>
+              <br/>
+              Tags: <span class="tag">school</span> <span class="tag">web</span>
+            </p>
+            <div class="preview-actions">
+              <span class="mini-btn">Autosave</span>
+              <span class="mini-btn">Search</span>
+              <span class="mini-btn">Export</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- This section contains a grid of features that highlight 
+            the key benefits of using Notetet for note-taking. -->
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Instant Start</h3>
+            <p>Open Projects and you can write immediately. No setup, no clutter.</p>
+          </article>
+          <article class="feature">
+            <h3>Tag + Find</h3>
+            <p>Tag notes and search across title, content, and tags fast.</p>
+          </article>
+          <article class="feature">
+            <h3>Local Save</h3>
+            <p>Your notes save to your browser so you don’t lose work mid-study.</p>
+          </article>
+          <article class="feature">
+            <h3>Export</h3>
+            <p>Download a note as a text file for submitting or backing up.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Why it’s more usable</h2>
+        <p>
+          Notetet is built around what you actually do: write, organize, and find your notes.
+        </p>
+      </div>
+
+      <!-- This section contains a series of cards that explain the design
+       principles and features of Notetet, such as clean navigation, 
+       focus-first layout, and fewer clicks. -->
+
+      <div class="cards">
+        <div class="card">
+          <h3>Clean navigation</h3>
+          <p>Only 3 pages. You always know where you are and what to do next.</p>
+      </div>
+        <div class="card">
+          <h3>Focus-first layout</h3>
+          <p>Big editor, calm spacing, and readable typography that is visually appealing to your brain.</p>
+        </div>
+        <div class="card">
+          <h3>Fewer clicks</h3>
+          <p>New note, save, and search are one tap away. It’s designed for fast workflows.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+      <!-- This is the footer of the page, containing copyright information 
+      and links to the About and Projects pages. -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Notetet — built for focus.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
